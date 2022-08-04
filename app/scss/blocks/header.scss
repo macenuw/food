@@ -1,0 +1,37 @@
+.header {
+  padding: 50px;
+  position: relative;
+  z-index: 5;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__call {
+    background: none;
+    border: 1px solid black;
+    padding: 12px 24px;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 5%;
+      top: 10%;
+      width: 90%;
+      height: 80%;
+      border: 2px solid #54ED39;
+      transition: 0.3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}

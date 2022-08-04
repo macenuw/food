@@ -1,0 +1,114 @@
+.calc {
+  padding-bottom: 90px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 320px;
+    height: 2px;
+    background-color: black;
+    bottom: 5vh;
+    left: calc(50vw - 160px);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    background-color: #F5FEFF;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  #gender {
+    position: relative;
+
+    .calc__btn {
+      margin: 0;
+    }
+
+    &::after {
+      content: '';
+      width: 14px;
+      height: 14px;
+      background-image: url('../images/icons/choice.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      left: calc(50% - 7px);
+      top: 70px;
+    }
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    min-width: 200px;
+    padding: 18px 8px;
+    text-align: center;
+    margin: auto;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+
+    &.active {
+      background-color: #54ED39;
+      color: white;
+    }
+  }
+
+  &__input {
+    min-width: 200px;
+    padding: 18px 8px;
+    margin: auto;
+    text-align: center;
+    color: black;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  &__total-text {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid gray;
+  }
+
+  &__total {
+    font-size: 30px;
+    margin-left: 50px;
+  }
+}
