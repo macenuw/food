@@ -1,0 +1,20 @@
+.food {
+  &__title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__inner {
+    background-color: #FDFEDE;
+    padding: 50px 0;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+  }
+}

@@ -73,3 +73,4 @@ function sliderInit(sliderSelector, sliderItemsWrapper, sliderItemsInner, slider
     })
   }
 }
+module.exports = sliderInit;

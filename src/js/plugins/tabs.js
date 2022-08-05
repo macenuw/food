@@ -1,4 +1,5 @@
-function test(parentSelector, imgSelector, buttonSelector, textSelector) {
+
+function tabs(parentSelector, imgSelector, buttonSelector, textSelector) {
   const tabs = document.querySelector(parentSelector);
   const tabsImages = tabs.querySelectorAll(imgSelector);
   const control = tabs.querySelectorAll(buttonSelector);
@@ -26,3 +27,4 @@ function test(parentSelector, imgSelector, buttonSelector, textSelector) {
     text[index].classList.add('active')
   }
 }
+module.exports = tabs;
