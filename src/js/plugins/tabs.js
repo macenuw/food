@@ -7,7 +7,6 @@ function tabs(parentSelector, imgSelector, buttonSelector, textSelector) {
   addActiveTab(0, tabsImages, control, text)
   control.forEach((btn, index) => {
     btn.addEventListener('click', (e) => {
-      console.log(e.target)
       if (e.target === btn) {
         removeActiveTab(tabsImages, control, text)
         addActiveTab(index, tabsImages, control, text)

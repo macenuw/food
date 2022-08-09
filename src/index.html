@@ -26,7 +26,7 @@
                         <a href="#" class="menu__link">Второй пункт</a>
                     </li>
                 </ul>
-                <button type="button" class="header__call">Связаться с нами</button>
+                <button type="button" class="header__call" data-name="openModal">Связаться с нами</button>
             </nav>
         </header>
         <div class="top-section container">
@@ -95,7 +95,7 @@
                     прочие важные, но скучные аспекты. Вам остается только полезная, сытная и правильная еда, которую мы
                     привозим прямо под дверь.
                 </p>
-                <button class="info__btn">Связаться с нами</button>
+                <button class="info__btn" data-name="openModal">Связаться с нами</button>
             </div>
             <div class="info__bottom">
                 <div class="info__bottom-info">
@@ -179,6 +179,97 @@
             </div>
         </div>
     </section>
+    <section class="promo container">
+        <h2 class="promo__title">
+            Заказывай пробный день прямо сейчас!
+        </h2>
+        <div class="call">
+            <form action="#" class="call__form">
+                <label for="name" class="call__label">
+                    <input type="text" name="name" id="name" class="call__input custom__input" placeholder="Ваше имя"
+                        require>
+                </label>
+                <label for="tel" class="call__label">
+                    <input type="text" name="tel" id="tel" class="call__input custom__input"
+                        placeholder="Ваш номер телефона" require>
+                </label>
+                <span class="call__arrow"></span>
+                <button class="call__btn" data-name="sendBtn">Перезвонить мне</button>
+            </form>
+        </div>
+        <div class="promo__content">
+            <div class="promo__text">
+                <div class="title">Акция для новых клиентов!</div>
+                <div class="promo__descr">
+                    Мы ценим каждого клиента и предлагаем вам стать одним из них на очень выгодных условиях.
+                    Каждому, кто закажет доставку питание на неделю, будет предоставлена скидка в размере
+                    <span>20%!</span>
+                    <br><br>
+                    Акция закончится 20 мая в 00:00
+                </div>
+            </div>
+            <div class="promo__timer">
+                <div class="title">Осталось до конца акции:</div>
+                <div class="timer" id="timer">
+                    <div class="timer__block">
+                        <span id="days">12</span>
+                        дней
+                    </div>
+                    <div class="timer__block">
+                        <span id="hours">20</span>
+                        часов
+                    </div>
+                    <div class="timer__block">
+                        <span id="minutes">56</span>
+                        минут
+                    </div>
+                    <div class="timer__block">
+                        <span id="seconds">20</span>
+                        секунд
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__inner container">
+            <div class="footer__social">
+                <div class="subtitle">Мы в социальных сетях:</div>
+                <a href="#" class="footer__link">instagram</a>
+                <a href="#" class="footer__link">facebook</a>
+            </div>
+            <div class="footer__pepper">
+                <img src="images/icons/veg.svg" alt="pepper">
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__subtitle">Или позвоните нам</div>
+                <a href="#" class="footer__link">+380984673649</a>
+                <a href="#" class="footer__link">+380984673649</a>
+            </div>
+        </div>
+    </footer>
+    <div class="modal hide" id="callModal">
+        <div class="modal__inner">
+            <h4 class="modal__title">Мы свяжемся с вами как можно быстрее!</h4>
+            <form action="#" class="modal__form">
+                <label for="modalName" class="modal__label">
+                    <input type="text" id="modalName" name="name" class="modal__input custom__input"
+                        placeholder="Ваше имя" required>
+                </label>
+                <label for="modalTel" class="modal__label">
+                    <input type="tel" id="modalTel" name="tel" class="modal__input custom__input"
+                        placeholder="Ваш номер телефона" required>
+                </label>
+                <button class="modal__btn" type="submit" data-name="sendBtn">Перезвонить мне</button>
+            </form>
+            <button class="modal__close-btn" data-name="closeBtn">x</button>
+        </div>
+    </div>
+    <div class="modal hide" id="infoModal">
+        <div class="modal__inner">
+            <h2 class="modal__title"></h2>
+        </div>
+    </div>
     <script src="js/main.min.js"></script>
 </body>
 

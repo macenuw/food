@@ -9,20 +9,20 @@ function calc() {
 
   function getStaticInfo() {
     gender.addEventListener('click', (e) => {
-      gender.querySelectorAll('.calc__btn').forEach(item => {
-        item.classList.remove('active')
-      });
       if (e.target.classList.contains('calc__btn')) {
+        gender.querySelectorAll('.calc__btn').forEach(item => {
+          item.classList.remove('active')
+        });
         userGender = e.target.textContent;
         e.target.classList.add('active')
         calcCalories()
       }
     })
     activity.addEventListener('click', (e) => {
-      activity.querySelectorAll('.calc__btn').forEach(item => {
-        item.classList.remove('active')
-      });
       if (e.target.classList.contains('calc__btn')) {
+        activity.querySelectorAll('.calc__btn').forEach(item => {
+          item.classList.remove('active')
+        });
         userActivity = e.target.getAttribute('data-active')
         e.target.classList.add('active')
         calcCalories()
@@ -31,16 +31,31 @@ function calc() {
   }
   getStaticInfo()
   height.addEventListener('change', () => {
-    userHeight = +height.value;
-    calcCalories()
+    if (!isNaN(height.value)) {
+      userHeight = +height.value;
+      height.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)'
+      calcCalories()
+    } else {
+      height.style.boxShadow = '0px 4px 15px red'
+    }
   })
   width.addEventListener('change', () => {
-    userWidth = +width.value;
-    calcCalories()
+    if (!isNaN(width.value)) {
+      userWidth = +width.value;
+      width.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)'
+      calcCalories()
+    } else {
+      width.style.boxShadow = '0px 4px 15px red'
+    }
   })
   age.addEventListener('change', () => {
-    userAge = +age.value;
-    calcCalories()
+    if (!isNaN(age.value)) {
+      userAge = +age.value;
+      age.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)'
+      calcCalories()
+    } else {
+      age.style.boxShadow = '0px 4px 15px red'
+    }
   })
 
   function calcCalories() {

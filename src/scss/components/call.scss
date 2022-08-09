@@ -1,0 +1,38 @@
+.call {
+  position: relative;
+  margin-bottom: 50px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 320px;
+    height: 2px;
+    background-color: black;
+    bottom: -40px;
+    left: calc(50% - 160px);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__arrow {
+    background-image: url('../images/icons/right.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 6px;
+  }
+
+  &__btn {
+    color: White;
+    background-color: black;
+    padding: 18px 24px;
+    cursor: pointer;
+  }
+}

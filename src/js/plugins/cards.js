@@ -1,5 +1,4 @@
 function cards() {
-  console.log('cards')
   const posts = [{
       image: 'images/tabs/vegy',
       imageAlt: 'vegy',
